@@ -6,19 +6,8 @@ int main(int argc, char *args[])
 	srand(time(NULL));
 	std::string input;
 	bool exit = false;
-	BTree *bTree = new BTree(3);
-
-	bTree->insert(651);
-	bTree->insert(598);
-	bTree->insert(866);
-	bTree->insert(392);
-	bTree->insert(631);
-	bTree->insert(882);
-	bTree->insert(791);
-	bTree->insert(557);
-	bTree->insert(836);
-	bTree->insert(925);
-
+	BTree *bTree = new BTree();
+	
 	while(!exit)
 	{
 		std::cout << "Please input a selection:\n";
@@ -240,8 +229,6 @@ void processInput(std::string input, BTree *bTree)
 
 		}
 		break;
-
-
 	case 9:
 		{
 			/*  TESTING FOR KEY REMOVAL
@@ -254,11 +241,12 @@ void processInput(std::string input, BTree *bTree)
 			*/
 
 			/* TESTING FOR KEY INSERTION AND/OR HIGH ORDER TREES
-			*/
+			
 			for(int i = 1; i < 1000; ++i)
 			{
 				bTree->insert(i);
 			}
+			*/
 		}
 		break;
 	default:
